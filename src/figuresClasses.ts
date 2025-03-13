@@ -23,11 +23,11 @@ export class Triangle implements Figure {
     this.c = c;
 
     if (a <= 0 || b <= 0 || c <= 0) {
-      throw new Error('your error message');
+      throw new Error('Side lengths must be greater than zero.');
     }
 
     if (a + b <= c || a + c <= b || c + b <= a) {
-      throw new Error('your error message');
+      throw new Error('The sum of any two sides must be greater than the third side.');
     }
   }
 
@@ -52,7 +52,7 @@ export class Circle implements Figure {
     this.radius = radius;
 
     if (radius <= 0) {
-      throw new Error('your error message');
+      throw new Error('Radius length must be greater than zero.');
     }
   }
 
@@ -79,7 +79,7 @@ export class Rectangle implements Figure {
     this.height = height;
 
     if (width <= 0 || height <= 0) {
-      throw new Error('your error message');
+      throw new Error('Side lengths must be greater than zero.');
     }
   }
 
